@@ -7,7 +7,7 @@
             <!-- Slides -->
             <?php for ($i = 0; $i < sizeof($heroVideosLinks); $i++) : ?>
                 <div class="swiper-slide">
-                    <video class="slider-video object-cover" alt="Meraki Capital Partners Story Video" autoplay muted loop playsinline poster="/assets/images/black.webp">
+                    <video class="slider-video h-screen w-screen object-cover" alt="Meraki Capital Partners Story Video" autoplay muted loop playsinline poster="/assets/images/black.webp">
                         <!-- Initial video source -->
                         <source src="<?= $heroVideosLinks[$i] ?>" type="video/mp4">
                     </video>
@@ -17,7 +17,7 @@
                     <div class="overlay-dark absolute top-0 left-0 w-full h-screen bg-black z-[2] opacity-20"></div>
                     <div class="title-container absolute top-0 left-0 w-full h-screen z-10 flex flex-col items-center justify-center text-center">
                         <h1 class="title font-black text-[5.5vw] leading-[5vw] text-white leading-2 tracking-tight"><?= $heroVideoHeadings[$i] ?></h1>
-                        <a href="#" class="mt-10 text-white font-medium transition duration-200 hover:scale-125" >Read More</a>
+                        <a href="#" class="mt-10 text-white font-normal transition duration-200 hover:scale-110" >Read More</a>
                     </div>
                 </div>
             <?php endfor ?>

@@ -1,22 +1,28 @@
 /**
  * Header Sidebar Navigation Icon
  */
-var isClicked = flase;
+var isClicked = false;
 
 function addSidbarNavIconAnimation() {
     let dots = document.querySelectorAll('#nav-side-bar-icon .dot');
-    dots[0].classList.add('translate-x-[0.7rem]', 'bg-red-500', 'z-[-1]');
-    // dots[1].classList.replace('bg-white', 'bg-black');
+    dots[0].classList.replace('bg-white', 'bg-black');
+    dots[1].classList.replace('bg-white', 'bg-black');
+    dots[2].classList.replace('bg-white', 'bg-black');
+    
+    dots[0].classList.add('translate-x-[12px]', 'z-[-1]');
     dots[1].classList.add('scale-125');
-    dots[2].classList.add('translate-x-[-0.7rem]', 'bg-yellow-800', 'z-[-1]');
+    dots[2].classList.add('translate-x-[-12px]', 'z-[-1]');
 }
 
 function removeSidbarNavIconAnimation(){
     let dots = document.querySelectorAll('#nav-side-bar-icon .dot');
-    dots[0].classList.remove('translate-x-[0.7rem]', 'bg-red-500', 'z-[-1]');
-    // dots[1].classList.replace('bg-black', 'bg-white');
+    dots[0].classList.replace('bg-black', 'bg-white');
+    dots[1].classList.replace('bg-black', 'bg-white');
+    dots[2].classList.replace('bg-black', 'bg-white');
+
+    dots[0].classList.remove('translate-x-[12px]', 'z-[-1]');
     dots[1].classList.remove('scale-125');
-    dots[2].classList.remove('translate-x-[-0.7rem]', 'bg-yellow-800', 'z-[-1]');
+    dots[2].classList.remove('translate-x-[-12px]', 'z-[-1]');
 
 }
 

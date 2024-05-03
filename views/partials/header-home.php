@@ -4,21 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS, JS, Favicon Linking -->
     <script src="/script.js"></script>
     <link rel="stylesheet" href="/style.css">
     <link rel="shortcut icon" href="/assets/images/favicon.svg" type="image/x-icon">
+    
+    <!-- Swiper JS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <title> <?= $title ?> </title>
 </head>
 
 <body>
     <div class="main">
-        <nav class="bg-transparent h-[20vh] w-full flex justify-between items-center px-12 fixed z-50">
+        <nav class="bg-transparent h-[17vh] w-full flex justify-between items-center px-12 fixed z-50">
             <!-- Logo -->
             <a href="/" class="w-[10.5%]"><img src="/assets/images/logo-white.svg" alt="Meraki Capital Partners Logo"></a>
 
             <!-- Navigation 3 dotes -->
-            <div id="nav-side-bar-icon" class="flex bg-transparent p-5 rounded-full cursor-pointer hover:backdrop-blur hover:scale-110 hover:border-white hover:border-2 transition duration-500 ease-in-out" onmouseleave="removeSidbarNavIconAnimation()" onmouseenter="addSidbarNavIconAnimation()" onclick="navIconClick()">
+            <div id="nav-side-bar-icon" class="flex bg-transparent p-5 rounded-full cursor-pointer hover:bg-white hover:scale-110 transition duration-500 ease-in-out" onmouseleave="removeSidbarNavIconAnimation()" onmouseenter="addSidbarNavIconAnimation()" onclick="navIconClick()">
                 <div class="dot bg-white w-1 h-1 rounded-full m-[4px] transition duration-300"></div>
                 <div class="dot bg-white w-1 h-1 rounded-full m-[4px] transition duration-300"></div>
                 <div class="dot bg-white w-1 h-1 rounded-full m-[4px] transition duration-300"></div>

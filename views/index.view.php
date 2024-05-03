@@ -11,13 +11,19 @@
                         <!-- Initial video source -->
                         <source src="<?= $heroVideosLinks[$i] ?>" type="video/mp4">
                     </video>
+
                     <!-- Overlay for film grain -->
                     <div class="overlay-film-grain absolute top-0 left-0 w-full h-screen bg-[url('/assets/images/film-grain.gif')] mix-blend-overlay z-[1] opacity-10"></div>
+
                     <!-- Overlay for dark background -->
                     <div class="overlay-dark absolute top-0 left-0 w-full h-screen bg-black z-[2] opacity-20"></div>
+
                     <div class="title-container absolute top-0 left-0 w-full h-screen z-10 flex flex-col items-center justify-center text-center">
-                        <h1 class="title font-black text-[5.5vw] leading-[5vw] text-white leading-2 tracking-tight"><?= $heroVideoHeadings[$i] ?></h1>
-                        <a href="#" class="mt-10 text-white font-normal transition duration-200 hover:scale-110" >Read More</a>
+                        <!-- Slider Main Title -->
+                        <h1 class="title font-black text-[5.5vw] max-lg:text-[10vw] max-md:text-[9vw] leading-[5vw] text-white leading-2 max-lg:leading-[10vw] max-md:leading-10 tracking-tight"><?= $heroVideoHeadings[$i] ?></h1>
+                        
+                        <!-- Read More Link -->
+                        <a href="#" class="mt-10 text-white font-normal transition duration-200 hover:scale-110 max-lg:text-2xl max-md:text-xl">Read More</a>
                     </div>
                 </div>
             <?php endfor ?>
@@ -27,7 +33,7 @@
 
     <div id="bottom-bar" class="w-full fixed bottom-0 left-0 p-10 z-10 flex justify-between items-end">
         <div id="nav-dots">
-            <div class="bottom-slider-nav-dot w-2 h-2 rounded-full my-4 transition duration-300 cursor-pointer"></div>
+            <div class="bottom-slider-nav-dot w-2 rounded-full my-4 transition duration-300 cursor-pointer"></div>
         </div>
 
         <!-- Bottom Nevigation Buttons Play/Pause Autoplay, Previouse SLide, Next Slide -->

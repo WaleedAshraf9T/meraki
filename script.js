@@ -31,12 +31,12 @@ function navIconClick(){
     let mainSidbar = document.getElementById('nav-sidbar');
 
     if(!isClicked){
-        overlay.classList.replace("translate-x-[-100vh]", "translate-x-0");
-        mainSidbar.classList.replace("translate-x-[150vh]", "translate-x-0");
+        overlay.classList.replace("translate-x-[-35vw]", "translate-x-0");
+        mainSidbar.classList.replace("translate-x-[75vw]", "translate-x-0");
         isClicked = true;
     }else{
-        overlay.classList.replace("translate-x-0", "translate-x-[-100vh]");
-        mainSidbar.classList.replace("translate-x-0", "translate-x-[150vh]");
+        overlay.classList.replace("translate-x-0", "translate-x-[-35vw]");
+        mainSidbar.classList.replace("translate-x-0", "translate-x-[75vw]");
         isClicked = false;
     }
 }

@@ -1,3 +1,3 @@
-<div id="preloader" class="bg-[#111111] h-screen w-screen transition duration-1000 flex justify-center items-center fixed z-50">
-    <img src="/assets//images/loader 2.gif" alt="" class="mix-blend-screen w-[15%]">
+<div id="preloader" style="width: 100vw; height: 100vh; background-color: #111111; display:flex; justify-content: center; align-items: center; z-index: 50; position: fixed; transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); transition-duration: 1000ms;">
+    <img src="/assets//images/loader 2.gif" alt="" style = "mix-blend-mode: screen; width: 15%;">
 </div>

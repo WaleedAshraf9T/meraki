@@ -1,4 +1,5 @@
 <?php require_once "views/partials/header-home.php"; ?>
+<?php require_once "views/partials/preloader.php"; ?>
 
 <div class="hero-video fixed select-none bg-black">
     <div class="swiper">
@@ -10,6 +11,8 @@
                     <video class="slider-video h-screen w-screen object-cover" alt="Meraki Capital Partners Story Video" autoplay muted loop playsinline poster="/assets/images/black.webp">
                         <!-- Initial video source -->
                         <source src="<?= $heroVideosLinks[$i] ?>" type="video/mp4">
+                        <source src="<?= str_replace('.mp4', '.webm', $heroVideosLinks[$i]) ?>" type="video/webm">
+                        <source src="<?= str_replace('.mp4', '.ogv', $heroVideosLinks[$i]) ?>" type="video/ogg">
                     </video>
 
                     <!-- Overlay for film grain -->
@@ -18,12 +21,16 @@
                     <!-- Overlay for dark background -->
                     <div class="overlay-dark absolute top-0 left-0 w-full h-screen bg-black z-[2] opacity-20"></div>
 
-                    <div class="title-container absolute top-0 left-0 w-full h-screen z-10 flex flex-col items-center justify-center text-center">
+                    <div class="title-container absolute top-[5vh] left-0 w-full h-screen z-10 flex flex-col items-center justify-center text-center">
                         <!-- Slider Main Title -->
-                        <h1 class="title font-black text-[5.5vw] max-lg:text-[10vw] max-md:text-[9vw] leading-[5vw] text-white leading-2 max-lg:leading-[10vw] max-md:leading-10 tracking-tight"><?= $heroVideoHeadings[$i] ?></h1>
-                        
+                        <h1 class="title font-black text-[5vw] max-lg:text-[10vw] max-md:text-[9vw] leading-[5vw] text-white leading-2 max-lg:leading-[10vw] max-md:leading-10 tracking-tight"><?= $heroVideoHeadings[$i] ?></h1>
+
                         <!-- Read More Link -->
-                        <a href="#" class="mt-10 text-white font-normal transition duration-200 hover:scale-110 max-lg:text-2xl max-md:text-xl">Read More</a>
+                        <div class="mt-10 cursor-pointer">
+                            <div class="w-[7vw] h-[7vw] rounded-full bg-transparent border-2 border-white border-dashed mx-1 duration-1000 hover:motion-safe:animate-spin z-[2]"></div>
+                            <div class="read-more-btn relative -top-1/2 text-white -z-10">Read More</div>
+                        </div>
+                        <!-- <a href="#" class="mt-10 text-white font-normal transition duration-200 hover:scale-110 max-lg:text-2xl max-md:text-xl">Read More</a> -->
                     </div>
                 </div>
             <?php endfor ?>

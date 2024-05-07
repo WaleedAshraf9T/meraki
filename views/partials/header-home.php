@@ -9,19 +9,19 @@
     <script src="/script.js"></script>
     <link rel="stylesheet" href="/style.css">
     <link rel="shortcut icon" href="/assets/images/favicon.svg" type="image/x-icon">
-    
+
     <!-- Swiper JS CDN -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="/views/swiper-bunble.min.css" />
+    <script src="/views/swiper-bundle.min.js"></script>
 
     <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/tailwindcss.js"></script>
     <title> <?= $title ?> </title>
 </head>
 
 <body>
     <div class="main">
-        <nav class="bg-transparent h-[17vh] w-full flex justify-between items-center px-12 max-lg:px-10 max-md:px-8 fixed z-50">
+        <nav class="bg-transparent h-[17vh] w-full flex justify-between items-center px-12 max-lg:px-10 max-md:px-8 fixed z-40">
             <!-- Logo -->
             <a href="/" class="w-[10.5%] max-lg:w-[15%] max-md:w-[30%]"><img src="/assets/images/logo-white.svg" alt="Meraki Capital Partners Logo"></a>
 
@@ -34,23 +34,21 @@
 
             <div id="nav-sidbar-overlay" class="translate-x-[-35vw] transition duration-700 bg-black/50 h-screen w-[35vw] absolute top-0 left-0 z-[-1]"></div>
 
-            <div id="nav-sidbar" class="translate-x-[75vw] transition duration-700 absolute w-[70vw] h-screen bg-[#111111] top-0 right-0 z-[-1] flex items-center justify-center font-extrabold text-7xl max-md:text-4xl">
-                <ul class="flex flex-col items-center">
-                    <a href="/" class="m-2 text-transparent active-nav-item">
-                        <li>HOME</li>
-                    </a>
-                    <a href="#" class="m-2 text-white">
-                        <li>ABOUT</li>
-                    </a>
-                    <a href="#" class="m-2 text-white">
-                        <li>WORKS</li>
-                    </a>
-                    <a href="#" class="m-2 text-white">
-                        <li>NEWS</li>
-                    </a>
-                    <a href="#" class="m-2 text-white">
-                        <li>CONTACT</li>
-                    </a>
-                </ul>
+            <div id="nav-sidbar" class="translate-x-[75vw] transition duration-700 absolute w-[70vw] h-screen bg-[#111111] top-0 right-0 z-[-1] flex flex-col items-center justify-center font-extrabold text-6xl max-lg:text-5xl max-md:text-4xl">
+                <a href="/" class="m-2 text-transparent active-nav-item">
+                    HOME
+                </a>
+                <a href="#" class="m-2 text-white">
+                    ABOUT
+                </a>
+                <a href="#" class="m-2 text-white">
+                    WORKS
+                </a>
+                <a href="#" class="m-2 text-white">
+                    NEWS
+                </a>
+                <a href="#" class="m-2 text-white">
+                    CONTACT
+                </a>
             </div>
         </nav>

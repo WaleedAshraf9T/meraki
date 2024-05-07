@@ -2,15 +2,8 @@
 
 $title = "Meraki Capital Partners";
 
-// $heroVideosLinks = [
-//     '/assets/videos/01-c.mp4', 
-//     '/assets/videos/02-c.mp4',
-//     '/assets/videos/03-c.mp4',
-//     '/assets/videos/04-c.mp4',
-// ];
-
 $heroVideosLinks = [
-    'https://dev.merakicapitalpartners.com/01-c.mp4', 
+    'https://dev.merakicapitalpartners.com/01-c.mp4',
     'https://dev.merakicapitalpartners.com/02-c.mp4',
     'https://dev.merakicapitalpartners.com/03-c.mp4',
     'https://dev.merakicapitalpartners.com/04-c.mp4',
@@ -18,7 +11,7 @@ $heroVideosLinks = [
 
 $heroVideoHeadings =  [
     'PARTNER FOR <br> <span style="color: transparent; -webkit-text-stroke: 1px white;">GROWTH</span>',
-    'HEAR, SOUL & <br> <span style="color: transparent; -webkit-text-stroke: 1px white;">MERAKI</span>',
+    'HEART, SOUL & <br> <span style="color: transparent; -webkit-text-stroke: 1px white;">MERAKI</span>',
     'INVESTING<br><span style="color: transparent; -webkit-text-stroke: 1px white;">BEYOND</span> NUMBERS',
     'YOUR <span style="color: transparent; -webkit-text-stroke: 1px white;">INVESTMENT</span><br>JOURNEY',
 ];

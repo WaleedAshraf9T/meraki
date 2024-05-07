@@ -42,5 +42,12 @@ function navIconClick(){
 }
 
 /**
- * Prev and Next Video Slider
+ * Preloader
  */
+
+document.addEventListener('DOMContentLoaded', function(){
+    let preloader = document.getElementById("preloader");
+    setTimeout(function(){
+        preloader.classList.add("translate-y-[-100vh]")
+    }, 1500);
+});

@@ -19,17 +19,17 @@
     <title> <?= $title ?> </title>
 </head>
 
-<body>
+<body class="bg-[#111111]">
     <div class="main">
-        <nav class="bg-transparent h-[17vh] w-full flex justify-between items-center px-12 max-lg:px-10 max-md:px-8 fixed z-40">
+        <nav id="mainSideNavbar" style="display: none;" class="bg-transparent h-[17vh] w-full justify-between items-center px-12 max-lg:px-10 max-md:px-8 fixed z-40">
             <!-- Logo -->
             <a href="/" class="w-[10.5%] max-lg:w-[15%] max-md:w-[30%]"><img src="/assets/images/logo-white.svg" alt="Meraki Capital Partners Logo"></a>
 
             <!-- Navigation 3 dotes -->
-            <div id="nav-side-bar-icon" class="flex bg-transparent p-5 rounded-full cursor-pointer hover:bg-white hover:scale-110 transition duration-500 ease-in-out" onmouseleave="removeSidbarNavIconAnimation()" onmouseenter="addSidbarNavIconAnimation()" onclick="navIconClick()">
-                <div class="dot bg-white w-1 h-1 max-lg:w-2 max-lg:h-2 max-md:w-[6px] max-md:h-[6px] rounded-full m-[4px] transition duration-300"></div>
-                <div class="dot bg-white w-1 h-1 max-lg:w-2 max-lg:h-2 max-md:w-[6px] max-md:h-[6px] rounded-full m-[4px] transition duration-300"></div>
-                <div class="dot bg-white w-1 h-1 max-lg:w-2 max-lg:h-2 max-md:w-[6px] max-md:h-[6px] rounded-full m-[4px] transition duration-300"></div>
+            <div id="nav-side-bar-icon" class="flex bg-transparent p-5 rounded-full cursor-pointer hover:bg-white hover:max-md:bg-transparent hover:scale-110 transition duration-500 ease-in-out" onmouseleave="removeSidbarNavIconAnimation()" onmouseenter="addSidbarNavIconAnimation()" onclick="navIconClick()">
+                <div class="dot bg-white max-md:bg-white w-1 h-1 max-lg:w-2 max-lg:h-2 max-md:w-[6px] max-md:h-[6px] rounded-full m-[4px] transition duration-300"></div>
+                <div class="dot bg-white max-md:bg-white w-1 h-1 max-lg:w-2 max-lg:h-2 max-md:w-[6px] max-md:h-[6px] rounded-full m-[4px] transition duration-300"></div>
+                <div class="dot bg-white max-md:bg-white w-1 h-1 max-lg:w-2 max-lg:h-2 max-md:w-[6px] max-md:h-[6px] rounded-full m-[4px] transition duration-300"></div>
             </div>
 
             <div id="nav-sidbar-overlay" class="translate-x-[-35vw] transition duration-700 bg-black/50 h-screen w-[35vw] absolute top-0 left-0 z-[-1]"></div>

@@ -27,8 +27,8 @@
 
                         <!-- Read More Link -->
                         <div class="mt-10 cursor-pointer">
-                            <div class="w-[7vw] h-[7vw] rounded-full bg-transparent border-2 border-white border-dashed mx-1 duration-1000 hover:motion-safe:animate-spin z-[2]"></div>
-                            <div class="read-more-btn relative -top-1/2 text-white -z-10">Read More</div>
+                            <div class="w-[7vw] h-[7vw] max-md:w-[25vw] max-md:h-[25vw] rounded-full bg-transparent border-2 border-white border-dashed mx-1 duration-1000 hover:motion-safe:animate-spin z-[2]"></div>
+                            <div class="read-more-btn relative -top-1/2 text-white -z-10 text-[14px]">Read More</div>
                         </div>
                         <!-- <a href="#" class="mt-10 text-white font-normal transition duration-200 hover:scale-110 max-lg:text-2xl max-md:text-xl">Read More</a> -->
                     </div>
@@ -60,6 +60,14 @@
 </div>
 
 <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var video = document.querySelector('video');
+        video.muted = true;
+        video.play();
+        let navbar = document.getElementById("mainSideNavbar");
+        navbar.style.display = "flex";
+    });
+
     var swiper = new Swiper(".swiper", {
         preloadImages: true,
         autoplay: {

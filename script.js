@@ -9,9 +9,9 @@ function addSidbarNavIconAnimation() {
     dots[1].classList.replace('bg-white', 'bg-black');
     dots[2].classList.replace('bg-white', 'bg-black');
     
-    dots[0].classList.add('translate-x-[12px]', 'z-[-1]');
+    dots[0].classList.add('translate-x-[13px]', 'z-[-1]');
     dots[1].classList.add('scale-125');
-    dots[2].classList.add('translate-x-[-12px]', 'z-[-1]');
+    dots[2].classList.add('translate-x-[-13px]', 'z-[-1]');
 }
 
 function removeSidbarNavIconAnimation(){
@@ -20,9 +20,9 @@ function removeSidbarNavIconAnimation(){
     dots[1].classList.replace('bg-black', 'bg-white');
     dots[2].classList.replace('bg-black', 'bg-white');
 
-    dots[0].classList.remove('translate-x-[12px]', 'z-[-1]');
+    dots[0].classList.remove('translate-x-[13px]', 'z-[-1]');
     dots[1].classList.remove('scale-125');
-    dots[2].classList.remove('translate-x-[-12px]', 'z-[-1]');
+    dots[2].classList.remove('translate-x-[-13px]', 'z-[-1]');
 
 }
 

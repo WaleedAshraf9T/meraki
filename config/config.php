@@ -12,6 +12,7 @@ return [
         '/about'=> '/about.php',
         '/contact'=> '/contact.php',
         '/work'=> '/work.php',
+        '/news'=> '/news.php',
         '/404'=> '/404.php',
     ]
 ];

@@ -41,10 +41,10 @@
                 <a href="/about" class="nav-item m-2 text-white">
                     ABOUT
                 </a>
-                <a href="/works" class="nav-item m-2 text-white">
+                <a href="#" class="nav-item m-2 text-white">
                     WORKS
                 </a>
-                <a href="/news" class="nav-item m-2 text-white">
+                <a href="#" class="nav-item m-2 text-white">
                     NEWS
                 </a>
                 <a href="/contact" class="nav-item m-2 text-white">

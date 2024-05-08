@@ -7,7 +7,7 @@
 
 <!-- Hero Section -->
 <section class="fixed">
-    <img class="h-screen w-screen" src="/assets/images/about-1.webp" alt="about section hero image contains building construction under development or completed representing the progress">
+    <img class="h-screen w-screen" src="/assets/images/contact-1.webp" alt="about section hero image contains building construction under development or completed representing the progress">
     <!-- Overlay for film grain -->
     <div class="overlay-film-grain absolute top-0 left-0 w-full h-screen bg-[url('/assets/images/film-grain.gif')] mix-blend-overlay z-[1] opacity-10"></div>
 
@@ -16,7 +16,7 @@
 
     <div class="title-container absolute top-0 left-0 w-full h-screen z-10 flex flex-col items-center justify-center text-center">
         <!-- Slider Main Title -->
-        <h1 class="title font-black text-[5vw] max-lg:text-[10vw] max-md:text-[9vw] leading-[5vw] leading-2 max-lg:leading-[10vw] max-md:leading-10 text-white tracking-tight">THE <span style="color: transparent; -webkit-text-stroke: 1px white;">FIRM</span></h1>
+        <h1 class="title font-black text-[5vw] max-lg:text-[10vw] max-md:text-[9vw] leading-[5vw] leading-2 max-lg:leading-[10vw] max-md:leading-10 text-white tracking-tight">CONTACT <span style="color: transparent; -webkit-text-stroke: 1px white;">US</span></h1>
     </div>
 </section>
 

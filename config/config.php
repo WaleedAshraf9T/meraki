@@ -9,7 +9,6 @@ return [
     ],*/
     'routes' => [
         '/' => '/index.php',
-        '/home'=> '/index.php',
         '/about'=> '/about.php',
         '/contact'=> '/contact.php',
         '/work'=> '/work.php',

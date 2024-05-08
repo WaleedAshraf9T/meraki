@@ -5,37 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- CSS, JS, Favicon Linking -->
     <script src="/script.js"></script>
     <link rel="stylesheet" href="/style.css">
-
     <link rel="shortcut icon" href="/assets/images/favicon.svg" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="/tailwindcss.js"></script>
     <title> <?= $title ?> </title>
 </head>
 
-<body>
+<body class="bg-[#111111]" onload="preloader()">
     <div class="main">
-        <nav class="bg-transparent h-[20vh] w-full flex justify-between items-center px-12 fixed z-50">
+        <nav id="mainSideNavbar" style="display: none;" class="bg-transparent h-[17vh] max-md:h-[14vh] w-full justify-between items-center px-12 max-lg:px-10 max-md:px-8 fixed z-40">
             <!-- Logo -->
-            <a href="/" class="w-[10.5%]"><img src="/assets/images/logo-white.svg" alt="Meraki Capital Partners Logo"></a>
+            <a href="/" class="w-[10.5%] max-lg:w-[15%] max-md:w-[30%]"><img src="/assets/images/logo-white.svg" alt="Meraki Capital Partners Logo"></a>
 
             <!-- Navigation 3 dotes -->
-            <div id="nav-side-bar-icon" class="flex bg-transparent p-5 rounded-full cursor-pointer hover:backdrop-blur hover:scale-110 hover:border-white hover:border-2 transition duration-500 ease-in-out" onmouseleave="removeSidbarNavIconAnimation()" onmouseenter="addSidbarNavIconAnimation()" onclick="navIconClick()">
-                <div class="dot bg-white w-1 h-1 rounded-full m-[4px] transition duration-300"></div>
-                <div class="dot bg-white w-1 h-1 rounded-full m-[4px] transition duration-300"></div>
-                <div class="dot bg-white w-1 h-1 rounded-full m-[4px] transition duration-300"></div>
+            <div id="nav-side-bar-icon" class="flex bg-transparent p-5 rounded-full cursor-pointer hover:bg-white hover:max-md:bg-transparent hover:scale-110 transition duration-500 ease-in-out" onmouseleave="removeSidbarNavIconAnimation()" onmouseenter="addSidbarNavIconAnimation()" onclick="navIconClick()">
+                <div class="dot bg-white max-md:bg-white w-1 h-1 max-lg:w-2 max-lg:h-2 max-md:w-[6px] max-md:h-[6px] rounded-full m-[4px] transition duration-300"></div>
+                <div class="dot bg-white max-md:bg-white w-1 h-1 max-lg:w-2 max-lg:h-2 max-md:w-[6px] max-md:h-[6px] rounded-full m-[4px] transition duration-300"></div>
+                <div class="dot bg-white max-md:bg-white w-1 h-1 max-lg:w-2 max-lg:h-2 max-md:w-[6px] max-md:h-[6px] rounded-full m-[4px] transition duration-300"></div>
             </div>
 
-            <div id="nav-sidbar-overlay" class="translate-x-[-100vh] transition duration-700 bg-black/50 h-screen w-[100vh] absolute top-0 left-0 z-[-1]"></div>
+            <div id="nav-sidbar-overlay" class="translate-x-[-35vw] transition duration-700 bg-black/50 h-screen w-[35vw] absolute top-0 left-0 z-[-1]" onclick="navIconClick()"></div>
 
-            <div id="nav-sidbar" class="translate-x-[150vh] transition duration-700 absolute w-[150vh] h-screen bg-[#111111] top-0 right-0 z-[-1] flex items-center justify-center font-extrabold text-7xl">
-                <ul class="flex flex-col items-center">
-                    <a href="/" class="m-2 text-transparent active-nav-item" ><li>HOME</li></a>
-                    <a href="#" class="m-2 text-white" ><li>ABOUT</li></a>
-                    <a href="#" class="m-2 text-white" ><li>WORKS</li></a>
-                    <a href="#" class="m-2 text-white" ><li>NEWS</li></a>
-                    <a href="#" class="m-2 text-white" ><li>CONTACT</li></a>
-                </ul>
+            <div id="nav-sidbar" class="translate-x-[75vw] transition duration-700 absolute w-[70vw] h-screen bg-[#111111] top-0 right-0 z-[-1] flex flex-col items-center justify-center font-extrabold text-6xl max-lg:text-5xl max-md:text-4xl">
+                <a href="/" class="nav-item m-2 text-transparent">
+                    HOME
+                </a>
+                <a href="/about" class="nav-item m-2 text-white">
+                    ABOUT
+                </a>
+                <a href="/works" class="nav-item m-2 text-white">
+                    WORKS
+                </a>
+                <a href="/news" class="nav-item m-2 text-white">
+                    NEWS
+                </a>
+                <a href="/contact" class="nav-item m-2 text-white">
+                    CONTACT
+                </a>
             </div>
         </nav>

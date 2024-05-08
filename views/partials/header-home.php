@@ -19,7 +19,7 @@
     <title> <?= $title ?> </title>
 </head>
 
-<body class="bg-[#111111]" onload="preloader()">
+<body class="bg-[#111111]" onload="preloader(); switchNavItem()">
     <div class="main">
         <nav id="mainSideNavbar" style="display: none;" class="bg-transparent h-[17vh] max-md:h-[14vh] w-full justify-between items-center px-12 max-lg:px-10 max-md:px-8 fixed z-40">
             <!-- Logo -->
@@ -35,19 +35,19 @@
             <div id="nav-sidbar-overlay" class="translate-x-[-35vw] transition duration-700 bg-black/50 h-screen w-[35vw] absolute top-0 left-0 z-[-1]" onclick="navIconClick()"></div>
 
             <div id="nav-sidbar" class="translate-x-[75vw] transition duration-700 absolute w-[70vw] h-screen bg-[#111111] top-0 right-0 z-[-1] flex flex-col items-center justify-center font-extrabold text-6xl max-lg:text-5xl max-md:text-4xl">
-                <a href="/" class="m-2 text-transparent active-nav-item">
+                <a href="/" class="nav-item m-2 text-transparent">
                     HOME
                 </a>
-                <a href="#" class="m-2 text-white">
+                <a href="/about" class="nav-item m-2 text-white">
                     ABOUT
                 </a>
-                <a href="#" class="m-2 text-white">
+                <a href="/works" class="nav-item m-2 text-white">
                     WORKS
                 </a>
-                <a href="#" class="m-2 text-white">
+                <a href="/news" class="nav-item m-2 text-white">
                     NEWS
                 </a>
-                <a href="#" class="m-2 text-white">
+                <a href="/contact" class="nav-item m-2 text-white">
                     CONTACT
                 </a>
             </div>

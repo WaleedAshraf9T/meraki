@@ -19,9 +19,9 @@
     <title> <?= $title ?> </title>
 </head>
 
-<body class="bg-[#111111]">
+<body class="bg-[#111111]" onload="preloader()">
     <div class="main">
-        <nav id="mainSideNavbar" style="display: none;" class="bg-transparent h-[17vh] w-full justify-between items-center px-12 max-lg:px-10 max-md:px-8 fixed z-40">
+        <nav id="mainSideNavbar" style="display: none;" class="bg-transparent h-[17vh] max-md:h-[14vh] w-full justify-between items-center px-12 max-lg:px-10 max-md:px-8 fixed z-40">
             <!-- Logo -->
             <a href="/" class="w-[10.5%] max-lg:w-[15%] max-md:w-[30%]"><img src="/assets/images/logo-white.svg" alt="Meraki Capital Partners Logo"></a>
 
@@ -32,7 +32,7 @@
                 <div class="dot bg-white max-md:bg-white w-1 h-1 max-lg:w-2 max-lg:h-2 max-md:w-[6px] max-md:h-[6px] rounded-full m-[4px] transition duration-300"></div>
             </div>
 
-            <div id="nav-sidbar-overlay" class="translate-x-[-35vw] transition duration-700 bg-black/50 h-screen w-[35vw] absolute top-0 left-0 z-[-1]"></div>
+            <div id="nav-sidbar-overlay" class="translate-x-[-35vw] transition duration-700 bg-black/50 h-screen w-[35vw] absolute top-0 left-0 z-[-1]" onclick="navIconClick()"></div>
 
             <div id="nav-sidbar" class="translate-x-[75vw] transition duration-700 absolute w-[70vw] h-screen bg-[#111111] top-0 right-0 z-[-1] flex flex-col items-center justify-center font-extrabold text-6xl max-lg:text-5xl max-md:text-4xl">
                 <a href="/" class="m-2 text-transparent active-nav-item">

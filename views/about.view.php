@@ -5,7 +5,7 @@
 
 <!-- Hero Section -->
 <section class="select-none">
-    <img class="h-screen w-screen" src="/assets/images/the-firm-2.jpg" alt="about section hero image contains building construction under development or completed representing the progress">
+    <img class="h-screen w-screen" src="/assets/images/the-firm-2.webp" alt="about section hero image contains building construction under development or completed representing the progress">
     <!-- Overlay for film grain -->
     <div class="overlay-film-grain absolute top-0 left-0 w-full h-screen bg-[url('/assets/images/film-grain.gif')] mix-blend-overlay z-[1] opacity-10"></div>
 

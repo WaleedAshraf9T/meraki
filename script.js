@@ -51,51 +51,50 @@ function navIconClick() {
 }
 
 /**
- * Switching avtive nav item 
+ * Switching avtive nav item
  */
-document.addEventListener('DOMContentLoaded', function(){
-    const url = new URL(window.location.href);
-    const endpoint = url.pathname;
-    let navItems = document.querySelectorAll(".nav-item");
+document.addEventListener("DOMContentLoaded", function () {
+  const url = new URL(window.location.href);
+  const endpoint = url.pathname;
+  let navItems = document.querySelectorAll(".nav-item");
 
-    navItems.forEach(item => {
-        item.classList.replace('text-transparent', 'text-white');
-    });
-    
-    switch (endpoint) {
-        case '/':
-            navItems[0].classList.add('active-nav-item');
-            navItems[0].classList.replace('text-white', 'text-transparent');
-            break;
-        case '/firm':
-            navItems[1].classList.add('active-nav-item');
-            navItems[1].classList.replace('text-white', 'text-transparent');
-            break;
-        case '/works':
-            navItems[2].classList.add('active-nav-item');
-            navItems[2].classList.replace('text-white', 'text-transparent');
-            break;
-        case '/news':
-            navItems[3].classList.add('active-nav-item');
-            navItems[3].classList.replace('text-white', 'text-transparent');
-            break;
-        case '/contact':
-            navItems[4].classList.add('active-nav-item');
-            navItems[4].classList.replace('text-white', 'text-transparent');
-            break;
-        default:
-            break;
-    }
+  navItems.forEach((item) => {
+    item.classList.replace("text-transparent", "text-white");
+  });
 
-    /**
-     * Locomotive Smooth Scrolling
-     */
-    const scroll = new LocomotiveScroll({
-        el: document.querySelector('#main'),
-        smooth: true
-    });
+  switch (endpoint) {
+    case "/":
+      navItems[0].classList.add("active-nav-item");
+      navItems[0].classList.replace("text-white", "text-transparent");
+      break;
+    case "/firm":
+      navItems[1].classList.add("active-nav-item");
+      navItems[1].classList.replace("text-white", "text-transparent");
+      break;
+    case "/works":
+      navItems[2].classList.add("active-nav-item");
+      navItems[2].classList.replace("text-white", "text-transparent");
+      break;
+    case "/news":
+      navItems[3].classList.add("active-nav-item");
+      navItems[3].classList.replace("text-white", "text-transparent");
+      break;
+    case "/contact":
+      navItems[4].classList.add("active-nav-item");
+      navItems[4].classList.replace("text-white", "text-transparent");
+      break;
+    default:
+      break;
+  }
+
+  /**
+   * Locomotive Smooth Scrolling
+   */
+  const scroll = new LocomotiveScroll({
+    el: document.querySelector("#main"),
+    smooth: true,
+  });
 });
-
 
 /**
  * Preloader

@@ -1,18 +1,16 @@
 <?php require_once "views/partials/header.php"; ?>
 <?php require_once "views/partials/preloader.php"; ?>
 
-<!-- --------- -->
-<!-- Main HTML -->
-<!-- --------- -->
+<!-- Main Contact Start -->
 
 <!-- Hero Section -->
-<section>
-    <img class="h-screen w-screen" src="/assets/images/about-1.webp" alt="about section hero image contains building construction under development or completed representing the progress">
+<section class="select-none">
+    <img class="h-screen w-screen" src="/assets/images/the-firm-2.jpg" alt="about section hero image contains building construction under development or completed representing the progress">
     <!-- Overlay for film grain -->
     <div class="overlay-film-grain absolute top-0 left-0 w-full h-screen bg-[url('/assets/images/film-grain.gif')] mix-blend-overlay z-[1] opacity-10"></div>
 
     <!-- Overlay for dark background -->
-    <div class="overlay-dark absolute top-0 left-0 w-full h-screen bg-black z-[2] opacity-20"></div>
+    <div class="overlay-dark absolute top-0 left-0 w-full h-screen bg-black z-[2] opacity-30"></div>
 
     <div class="title-container absolute top-0 left-0 w-full h-screen z-10 flex flex-col items-center justify-center text-center">
         <!-- Slider Main Title -->
@@ -20,15 +18,15 @@
     </div>
 </section>
 
+<!-- Main Contacnt End -->
 
-<!-- ---------- -->
-<!-- Javascript -->
-<!-- ---------- -->
+<!-- Current Page Javascript Start-->
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         let navbar = document.getElementById("mainSideNavbar");
         navbar.style.display = "flex";
     });
 </script>
+<!-- Current Page Javascript End-->
 
 <?php require_once "views/partials/footer.php" ?>

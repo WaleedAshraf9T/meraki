@@ -1,6 +1,7 @@
 <?php require_once "views/partials/header-home.php"; ?>
 <?php require_once "views/partials/preloader.php"; ?>
 
+<!-- Main Contact Starts-->
 <div class="hero-video fixed select-none bg-black">
     <div class="swiper">
         <!-- Additional required wrapper -->
@@ -58,6 +59,7 @@
         </div>
     </div>
 </div>
+<!-- Main Content End -->
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {

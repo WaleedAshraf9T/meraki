@@ -1,5 +1,45 @@
 <?php require_once "views/partials/header.php"; ?>
-<!-- <?php require_once "views/partials/preloader.php"; ?> -->
+<?php require_once "views/partials/preloader.php"; ?>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $fname = $_POST['fname'];
+    $lname = $_POST['fname'];
+    $phoneNo = $_POST['phoneNo'];
+    $email = $_POST['email'];
+    $whoAreYou = $_POST['whoAreYou'];
+    $message = $_POST['message'];
+
+    // Email recipient
+    $to = 'exsoldev@gmail.com';
+
+    // Email subject
+    $subject = 'Contact Us Form New Submission';
+
+    // Email headers
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+    $headers .= "From: $email\r\n";
+
+    // Email body
+    $email_body = "<html><body>";
+    $email_body .= "<h2>Contact Us Form Submission</h2>";
+    $email_body .= "<p><strong>First Name:</strong> $fname</p>";
+    $email_body .= "<p><strong>Last Name:</strong> $lname</p>";
+    $email_body .= "<p><strong>Phone Number:</strong> $phoneNo</p>";
+    $email_body .= "<p><strong>Email:</strong> $email</p>";
+    $email_body .= "<p><strong>Who Are You:</strong> $whoAreYou</p>";
+    $email_body .= "<p><strong>Message:</strong> $message</p>";
+    $email_body .= "</body></html>";
+
+    // Send email
+    if (mail($to, $subject, $email_body, $headers)) {
+        echo "<p class='text-black'>Email sent successfully!</p>";
+    } else {
+        echo "<p class='text-black'>Email sending failed.</p>";
+    }
+}
+?>
 
 <!-- Main Section Content Starts -->
 <!-- *************************** -->
@@ -44,7 +84,9 @@
 
 <section class="pb-[65vh] pt-[40vh] w-screen h-screen flex flex-col items-center justify-center">
     <h1 class="W-[80VW] text-white text-4xl font-black mb-10 tracking-wide text-center">By all means, send us an email and <span style="color: transparent; -webkit-text-stroke: 1px white;">get in touch.</span></h1>
-    <form class="w-[80vw]" method="post">
+
+    <!-- Contact Us Form -->
+    <form class="w-[80vw]" method="post" action="/views/sendEmail.php">
         <div class="flex mt-[5vh]">
             <input required placeholder="First Name*" type="text" name="fname" id="" class="p-3 m-3 w-full h-[5vh] bg-transparent border-b-2 border-white border-solid text-white font-light focus:outline-none">
             <input required placeholder="Last Name*" type="text" name="lname" id="" class="p-3 my-3 ml-3 w-full h-[5vh] bg-transparent border-b-2 border-white border-solid text-white font-light focus:outline-none">
@@ -66,12 +108,13 @@
             <button type="submit" class="w-[7vw] h-[7vw] max-md:w-[25vw] max-md:h-[25vw] rounded-full bg-transparent border-2 border-white border-dashed mx-1 duration-1000 hover:motion-safe:animate-spin z-[2]"></button>
         </div>
     </form>
+    <!-- Contact Us Form End -->
 </section>
 
 <!-- Google Map View-->
-<section>
+<!-- <section>
     <iframe class="h-[50vh] w-screen" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d184552.6741067327!2d-79.54286655715585!3d43.71812280254997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb90d7c63ba5%3A0x323555502ab4c477!2sToronto%2C%20ON%2C%20Canada!5e0!3m2!1sen!2s!4v1715210253537!5m2!1sen!2s" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</section>
+</section> -->
 <!-- ************************ -->
 <!-- Main Section Content End -->
 

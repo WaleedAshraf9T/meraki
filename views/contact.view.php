@@ -5,7 +5,7 @@
 <!-- *************************** -->
 <!-- Hero Section -->
 <section class="select-none">
-    <img class="h-screen w-screen" src="/assets/images/contact-us-2.jpg" alt="about section hero image contains building construction under development or completed representing the progress">
+    <img class="h-screen w-screen" src="/assets/images/contact-us-2.webp" alt="about section hero image contains building construction under development or completed representing the progress">
     <!-- Overlay for film grain -->
     <div class="overlay-film-grain absolute top-0 left-0 w-full h-screen bg-[url('/assets/images/film-grain.gif')] mix-blend-overlay z-[1] opacity-10"></div>
 
@@ -19,17 +19,17 @@
 </section>
 
 <section class="pt-[20vh] w-screen h-auto flex flex-col items-center justify-center">
-    <h1 class="w-[80vw] text-white text-4xl font-black mb-10 leading-normal tracking-wide">Please get in touch by using the following info or feel free to use <span style="color: transparent; -webkit-text-stroke: 1px white;">the form below.</span></h1>
-    <div class="w-[70vw] flex items-center justify-between">
-        <div class="w-[20vw] h-[20vw] p-10 text-white">
+    <h1 class="W-[80VW] text-white text-4xl font-black mb-10 tracking-wide text-center">Please get in touch by <span style="color: transparent; -webkit-text-stroke: 1px white;">using the following info.</span></h1>
+    <div class="w-[80vw] mt-10 flex items-center justify-between">
+        <div class="w-[20vw] h-auto text-white flex flex-col items-center">
             <h2 class="font-semibold text-xl mb-5">The Address</h2>
             <p class="font-light">Toronto, ON Canada</p>
         </div>
-        <div class="w-[20vw] h-[20vw]  p-10 text-white">
+        <div class="w-[20vw] h-auto text-white flex flex-col items-center">
             <h2 class="font-semibold text-xl mb-5">Emaill Address</h2>
             <p class="font-light"><a href="tel:+1(647)395-0605">+1 (647) 395-0605</a></p>
         </div>
-        <div class="w-[20vw] h-[20vw] p-10 text-white">
+        <div class="w-[20vw] h-auto text-white flex flex-col items-center">
             <h2 class="font-semibold text-xl mb-5">The Address</h2>
             <p class="font-light"><a href="mailto:info@merakicapitalpartners.com">info@merakicapitalpartners.com</a></p>
         </div>
@@ -37,13 +37,13 @@
 </section>
 
 <div class="w-screen flex items-center justify-center">
-    <hr class="mb-[10vw] w-[50vw]">
+    <div class="w-8 h-8 rounded-full bg-white"></div>
+    <hr class="my-[10vw] w-[30vw]">
+    <div class="w-8 h-8 rounded-full bg-white"></div>
 </div>
 
 <section class="pb-[65vh] pt-[40vh] w-screen h-screen flex flex-col items-center justify-center">
-    <div class="w-[80vw] flex items-start">
-        <h1 class="text-white text-4xl font-black mb-10 tracking-wide text-left">By all means, send us an email and <span style="color: transparent; -webkit-text-stroke: 1px white;">get in touch.</span></h1>
-    </div>
+    <h1 class="W-[80VW] text-white text-4xl font-black mb-10 tracking-wide text-center">By all means, send us an email and <span style="color: transparent; -webkit-text-stroke: 1px white;">get in touch.</span></h1>
     <form class="w-[80vw]" method="post">
         <div class="flex mt-[5vh]">
             <input required placeholder="First Name*" type="text" name="fname" id="" class="p-3 m-3 w-full h-[5vh] bg-transparent border-b-2 border-white border-solid text-white font-light focus:outline-none">

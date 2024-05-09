@@ -20,7 +20,7 @@
 </head>
 
 <body class="bg-[#111111]" onload="preloader(); switchNavItem()">
-    <div class="main">
+    <div id="main">
         <nav id="mainSideNavbar" style="display: none;" class="bg-transparent h-[17vh] max-md:h-[14vh] w-full justify-between items-center px-12 max-lg:px-10 max-md:px-8 fixed z-40">
             <!-- Logo -->
             <a href="/" class="w-[10.5%] max-lg:w-[15%] max-md:w-[30%]"><img src="/assets/images/logo-white.svg" alt="Meraki Capital Partners Logo"></a>
@@ -38,8 +38,8 @@
                 <a href="/" class="nav-item m-2 text-transparent">
                     HOME
                 </a>
-                <a href="/about" class="nav-item m-2 text-white">
-                    ABOUT
+                <a href="/firm" class="nav-item m-2 text-white">
+                    THE FIRM
                 </a>
                 <a href="#" class="nav-item m-2 text-white">
                     WORKS

@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function(){
             navItems[0].classList.add('active-nav-item');
             navItems[0].classList.replace('text-white', 'text-transparent');
             break;
-        case '/about':
+        case '/firm':
             navItems[1].classList.add('active-nav-item');
             navItems[1].classList.replace('text-white', 'text-transparent');
             break;
@@ -86,6 +86,14 @@ document.addEventListener('DOMContentLoaded', function(){
         default:
             break;
     }
+
+    /**
+     * Locomotive Smooth Scrolling
+     */
+    const scroll = new LocomotiveScroll({
+        el: document.querySelector('#main'),
+        smooth: true
+    });
 });
 
 
@@ -94,7 +102,5 @@ document.addEventListener('DOMContentLoaded', function(){
  */
 function preloader() {
   let preloader = document.getElementById("preloader");
-  setTimeout(function () {
-    preloader.classList.add("translate-y-[-100vh]");
-  }, 1500);
+  preloader.classList.add("translate-y-[-100vh]");
 }

@@ -37,3 +37,21 @@
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
+
+@keyframes marquee {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-200%, 0, 0); }
+}
+
+/* Apply the animation to the marquee element */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Apply the animation to the text within the marquee */
+.marquee span {
+  display: inline-block;
+  animation: marquee 30s linear infinite; /* Adjust the duration and timing function as needed */
+}

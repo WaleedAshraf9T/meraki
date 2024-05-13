@@ -18,7 +18,7 @@
     <title> <?= $title ?> </title>
 </head>
 
-<body class="bg-[#111111]" onload="preloader()">
+<body class="bg-white" onload="preloader()">
     <div id="main">
         <nav id="mainSideNavbar" style="display: none;" class="bg-transparent h-[17vh] max-md:h-[14vh] w-full justify-between items-center px-12 max-lg:px-10 max-md:px-8 fixed z-40">
             <!-- Logo -->

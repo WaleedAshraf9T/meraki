@@ -55,3 +55,16 @@
   display: inline-block;
   animation: marquee 30s linear infinite; /* Adjust the duration and timing function as needed */
 }
+
+.faq-answer {
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.faq-answer.open {
+  max-height: 1000px; /* A large enough value to fit your content */
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}

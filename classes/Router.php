@@ -8,10 +8,6 @@ class Router
 
     public function __construct(){}
 
-//    public function get($uri, $view){}
-
-//    public function post($uri, $view){}
-
     public function delete($uri, $view){}
 
     public function put($uri, $view){}

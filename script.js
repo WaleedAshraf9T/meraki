@@ -86,15 +86,27 @@ document.addEventListener("DOMContentLoaded", function () {
     default:
       break;
   }
-
-  /**
-   * Locomotive Smooth Scrolling
-   */
-  const scroll = new LocomotiveScroll({
-    el: document.querySelector("#main"),
-    smooth: true,
-  });
 });
+
+function onScrollNavUpdate(scroll){
+  // On Scroll NavBar Manipulation
+  scroll.on("scroll", (obj) => {
+    let currentScrollY = obj.scroll.y;
+  
+    const navIcon = document.getElementById("nav-side-bar-icon");
+    const logo = document.getElementById("logo");
+  
+    if (currentScrollY >= 20) {
+      logo.classList.remove("w-[10.5%]", "max-lg:w-[15%]", "max-md:w-[30%]");
+      logo.classList.add("w-0");
+      navIcon.classList.replace("bg-transparent", "bg-black");
+    } else {
+      logo.classList.remove("w-0");
+      logo.classList.add("w-[10.5%]", "max-lg:w-[15%]", "max-md:w-[30%]");
+      navIcon.classList.replace("bg-black", "bg-transparent");
+    }
+  });
+}
 
 /**
  * Preloader

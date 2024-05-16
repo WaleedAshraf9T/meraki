@@ -18,37 +18,37 @@
     </div>
 </section>
 
-<section class="bg-white w-screen h-screen rounded-tl-[50px] rounded-tr-[50px] relative -top-11 z-20 flex flex-col justify-center items-center">
-    <img src="/assets/images/icon-4.svg" alt="" class="h-1/6 m-20">
-    <p class="w-[75vw] text-center text-[2.7vw] font-normal tracking-normal leading-relaxed">Meraki is an alternative investment firm primarily focused on <b>private equity</b> and <b>real estate strategies</b>. Headquartered in Toronto, Canada the firm is one of the most active real assets and growth capital investors in North America.</p>
+<section class="bg-white w-screen h-screen max-md:h-[70vh] rounded-tl-[50px] max-md:rounded-tl-[25px] rounded-tr-[50px] max-md:rounded-tr-[25px] relative -top-11 z-20 flex flex-col justify-center items-center">
+    <img src="/assets/images/icon-4.svg" alt="" class="h-1/6 m-20 max-md:h-[10%]">
+    <p class="w-[75vw] text-center text-[2.7vw] max-md:text-[2.5vh] font-normal tracking-normal leading-relaxed">Meraki is an alternative investment firm primarily focused on <b>private equity</b> and <b>real estate strategies</b>. Headquartered in Toronto, Canada the firm is one of the most active real assets and growth capital investors in North America.</p>
 </section>
 
 
-<section class="w-screen h-[35vh] flex items-center justify-center">
-    <div class="marquee w-full font-extrabold text-8xl">
+<section class="w-screen h-[35vh] max-md:h-[10vh] flex items-center justify-center">
+    <div class="marquee w-full font-extrabold text-8xl max-md:text-4xl">
         <span>PUT SOMETHING OF YOURSELF, YOUR SOUL -</span>
         <span>PUT SOMETHING OF YOURSELF, YOUR SOUL</span>
         <span>PUT SOMETHING OF YOURSELF, YOUR SOUL</span>
     </div>
 </section>
 
-<section class="h-screen w-screen py-24 px-10 flex justify-center items-center">
-    <img src="/assets/images/the-firm-4.webp" alt="" class="w-[95vw] h-[90vh] object-cover rounded-xl">
+<section class="h-screen max-md:h-[50vh] w-screen py-24 px-10 flex justify-center items-center">
+    <img src="/assets/images/the-firm-4.webp" alt="" class="w-[95vw] h-full object-cover rounded-xl">
 </section>
 
-<section class="w-screen py-24 px-[2.5vw] bg-white select-none">
-    <?php for($i=0; $i<sizeof($faq); $i++): ?>
-    <div class="h- auto faq-item border-t-2 border-gray-600 py-8 px-5 cursor-pointer duration duration-300" onclick="toggleFAQ('faq<?= $i+1 ?>')">
-        <div class="flex justify-between items-center">
-            <div class="font-normal text-[40px]">
-                <span class="text-[#3F3F3F] mr-4">0<?= $i+1 ?></span> <?= $faq[$i]['q'] ?>
+<section class="w-screen py-24 max-md:pt-4 px-[2.5vw] bg-white select-none">
+    <?php for ($i = 0; $i < sizeof($faq); $i++) : ?>
+        <div class="h- auto faq-item border-t-2 border-gray-600 py-8 px-5 cursor-pointer duration duration-300 ease-in-out" onclick="toggleFAQ('faq<?= $i + 1 ?>')">
+            <div class="flex justify-between items-center">
+                <div class="font-normal max-md:font-medium text-[40px] max-md:text-[25px]">
+                    <span class="text-[#3F3F3F] mr-4">0<?= $i + 1 ?></span> <?= $faq[$i]['q'] ?>
+                </div>
+                <img src="/assets/icons/plus.svg" alt="Toggle Answer" class="max-md:w-1/6 transition-transform duration-300" id="icon<?= $i + 1 ?>">
             </div>
-            <img src="/assets/icons/plus.svg" alt="Toggle Answer" class="transition-transform duration-300" id="icon<?= $i+1 ?>">
+            <div id="faq<?= $i + 1 ?>" class="faq-answer text-4xl max-md:text-2xl leading-relaxed tracking-wide px-5">
+                <?= $faq[$i]['a'] ?>
+            </div>
         </div>
-        <div id="faq<?= $i+1 ?>" class="faq-answer text-4xl leading-relaxed tracking-wide px-5">
-            <?= $faq[$i]['a'] ?>
-        </div>
-    </div>
     <?php endfor ?>
     <div class="border-t-2 border-gray-600"></div>
 </section>
@@ -56,32 +56,44 @@
 
 <!-- Current Page Javascript Start-->
 <script>
+    var scroll;
     document.addEventListener('DOMContentLoaded', function() {
         let navbar = document.getElementById("mainSideNavbar");
         navbar.style.display = "flex";
-    });
 
+        /**
+         * Locomotive Smooth Scrolling
+         */
+            scroll = new LocomotiveScroll({
+            el: document.querySelector("#main"),
+            smooth: true,
+        });
+
+        onScrollNavUpdate(scroll);
+    });
+    
     function toggleFAQ(id) {
-    const answer = document.getElementById(id);
-    const allAnswers = document.querySelectorAll('.faq-answer');
-    const allIcons = document.querySelectorAll('.faq-item img');
+        const answer = document.getElementById(id);
+        const allAnswers = document.querySelectorAll('.faq-answer');
+        const allIcons = document.querySelectorAll('.faq-item img');
 
-    allAnswers.forEach((ans) => {
-        if (ans.id !== id) {
-            ans.classList.remove('open');
-            ans.previousElementSibling.querySelector('img').style.transform = 'rotate(0deg)';
+        allAnswers.forEach((ans) => {
+            if (ans.id !== id) {
+                ans.classList.remove('open');
+                ans.previousElementSibling.querySelector('img').style.transform = 'rotate(0deg)';
+            }
+        });
+
+        const icon = document.querySelector(`#${id}`).previousElementSibling.querySelector('img');
+        if (answer.classList.contains('open')) {
+            answer.classList.remove('open');
+            icon.style.transform = 'rotate(0deg)';
+        } else {
+            answer.classList.add('open');
+            icon.style.transform = 'rotate(135deg)';
         }
-    });
-
-    const icon = document.querySelector(`#${id}`).previousElementSibling.querySelector('img');
-    if (answer.classList.contains('open')) {
-        answer.classList.remove('open');
-        icon.style.transform = 'rotate(0deg)';
-    } else {
-        answer.classList.add('open');
-        icon.style.transform = 'rotate(135deg)';
+        scroll.update();
     }
-}
 </script>
 <!-- Current Page Javascript End-->
 

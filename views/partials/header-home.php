@@ -19,7 +19,7 @@
     <title> <?= $title ?> </title>
 </head>
 
-<body class="bg-[#111111]" onload="preloader(); switchNavItem()">
+<body class="bg-[#111111]" onload="preloader()">
     <div id="main">
         <nav id="mainSideNavbar" style="display: none;" class="bg-transparent h-[17vh] max-md:h-[14vh] w-full justify-between items-center px-12 max-lg:px-10 max-md:px-8 fixed z-40">
             <!-- Logo -->
@@ -41,12 +41,12 @@
                 <a href="/firm" class="nav-item m-2 text-white">
                     THE FIRM
                 </a>
-                <a href="#" class="nav-item m-2 text-white">
+                <!-- <a href="#" class="nav-item m-2 text-white">
                     WORKS
                 </a>
                 <a href="#" class="nav-item m-2 text-white">
                     NEWS
-                </a>
+                </a> -->
                 <a href="/contact" class="nav-item m-2 text-white">
                     CONTACT
                 </a>

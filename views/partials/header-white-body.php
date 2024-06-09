@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="/assets/images/favicon.svg" type="image/x-icon">
 
     <!-- Locomotive CSS CDN -->
-    <link rel="stylesheet" href="/locomotive-scroll.css">
+    <script src="https://unpkg.com/lenis@1.1.2/dist/lenis.min.js"></script> 
 
     <!-- Tailwind CSS CDN -->
     <script src="/tailwindcss.js"></script>
@@ -39,12 +39,12 @@
             <a href="/firm" class="nav-item m-2 text-white">
                 THE FIRM
             </a>
-            <a href="#" class="nav-item m-2 text-white">
+            <!-- <a href="#" class="nav-item m-2 text-white">
                 WORKS
             </a>
             <a href="#" class="nav-item m-2 text-white">
                 NEWS
-            </a>
+            </a> -->
             <a href="/contact" class="nav-item m-2 text-white">
                 CONTACT
             </a>

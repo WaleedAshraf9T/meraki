@@ -88,14 +88,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-function onScrollNavUpdate(scroll){
-  // On Scroll NavBar Manipulation
-  scroll.on("scroll", (obj) => {
-    let currentScrollY = obj.scroll.y;
-  
+function onScrollNavUpdate(scroll) {
+  window.addEventListener("scroll", function () {
+    let currentScrollY = window.scrollY;
+
     const navIcon = document.getElementById("nav-side-bar-icon");
     const logo = document.getElementById("logo");
-  
+
     if (currentScrollY >= 20) {
       logo.classList.remove("w-[10.5%]", "max-lg:w-[15%]", "max-md:w-[30%]");
       logo.classList.add("w-0");
@@ -114,4 +113,32 @@ function onScrollNavUpdate(scroll){
 function preloader() {
   let preloader = document.getElementById("preloader");
   preloader.classList.add("translate-y-[-100vh]");
+}
+
+/**
+ * Firm View FAQ Trigger
+ */
+function toggleFAQ(id) {
+  const answer = document.getElementById(id);
+  const allAnswers = document.querySelectorAll(".faq-answer");
+  const allIcons = document.querySelectorAll(".faq-item img");
+
+  allAnswers.forEach((ans) => {
+    if (ans.id !== id) {
+      ans.classList.remove("open");
+      ans.previousElementSibling.querySelector("img").style.transform =
+        "rotate(0deg)";
+    }
+  });
+
+  const icon = document
+    .querySelector(`#${id}`)
+    .previousElementSibling.querySelector("img");
+  if (answer.classList.contains("open")) {
+    answer.classList.remove("open");
+    icon.style.transform = "rotate(0deg)";
+  } else {
+    answer.classList.add("open");
+    icon.style.transform = "rotate(135deg)";
+  }
 }

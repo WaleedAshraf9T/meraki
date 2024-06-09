@@ -9,16 +9,76 @@
   padding: 0px;
   box-sizing: border-box;
   font-family: "Poppins";
+
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: rgba(128, 128, 128, 0.5) transparent;
+}
+
+/*
+  Lenis Smooth Scroll CSS
+*/
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Custom Scrollbar for WebKit Browsers */
+::-webkit-scrollbar {
+  width: 8px; /* Width of the vertical scrollbar */
+  height: 8px; /* Height of the horizontal scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.5); /* Gray transparent color */
+  border-radius: 50px; /* Rounded corners */
+  border: 2px solid transparent; /* Adds space around thumb */
+  background-clip: content-box; /* Ensures background does not fill the entire box */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(128, 128, 128, 0.7); /* Darker on hover */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* No background */
+}
+
+/* Custom Scrollbar for Firefox */
+* {
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: rgba(128, 128, 128, 0.5) transparent; /* Gray transparent color and transparent track */
+}
+
+/* Example of positioning a scrolling container */
+body {
+  overflow-y: scroll;
+  position: relative; /* Ensure the container is positioned */
 }
 
 /*
   Header Styling
 */
-.active-nav-item{
+.active-nav-item {
   -webkit-text-stroke: 1px white;
 }
 
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet-active {
   background: white !important;
 }
 
@@ -33,14 +93,18 @@
 
 .animated-custom-spin {
   animation-name: custom-spin;
-  animation-duration: 2s; 
+  animation-duration: 2s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
 
 @keyframes marquee {
-  0% { transform: translate3d(0, 0, 0); }
-  100% { transform: translate3d(-200%, 0, 0); }
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-200%, 0, 0);
+  }
 }
 
 /* Apply the animation to the marquee element */
